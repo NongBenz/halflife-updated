@@ -276,13 +276,9 @@ typedef struct enginefuncs_s
 	// destroyed and recreated.
 	void (*pfnRegisterTutorMessageShown)(int mid);
 	int (*pfnGetTimesTutorMessageShown)(int mid);
-	void (*ProcessTutorMessageDecayBuffer)(int* buffer, int bufferLength);
-	void (*ConstructTutorMessageDecayBuffer)(int* buffer, int bufferLength);
-	void (*ResetTutorMessageDecayData)();
 
 	void (*pfnQueryClientCvarValue)(const edict_t* player, const char* cvarName);
 	void (*pfnQueryClientCvarValue2)(const edict_t* player, const char* cvarName, int requestID);
-	int (*pfnCheckParm)(const char* pchCmdLineToken, const char** ppnext);
 	edict_t* (*pfnPEntityOfEntIndexAllEntities)(int iEntIndex);
 } enginefuncs_t;
 
